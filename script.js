@@ -1,5 +1,4 @@
 // Creation of function for percentage calculation
-
 function percentageCalculator() {
   var per =
     englishMarks + urduMarks + mathsMarks + computerMarks + physicsMarks;
@@ -8,6 +7,7 @@ function percentageCalculator() {
 }
 var studentPercentage = percentageCalculator;
 
+// Taken prompts from user
 var studentName = prompt("Enter your name");
 if (studentName == "") {
   alert("Please Enter Your Name");
@@ -31,15 +31,16 @@ var result = document.createElement("div");
 result.setAttribute("class", "studentResult");
 mainDiv.appendChild(result);
 
-var studentFrontName = document.createElement("h2");
+// Status row of student name, percentage, grade and scholarship discount
+var studentFrontName = document.createElement("p");
 studentFrontName.innerText = "Student Name : " + studentName;
 result.appendChild(studentFrontName);
 
-var percentage = document.createElement("h2");
+var percentage = document.createElement("p");
 percentage.innerText = "Percentage : " + studentPercentage();
 result.appendChild(percentage);
 
-var grade = document.createElement("h2");
+var grade = document.createElement("p");
 if (studentPercentage() >= 80) {
   grade.innerText = "Grade : A+";
 } else if (studentPercentage() >= 70 && studentPercentage() < 80) {
@@ -55,7 +56,7 @@ if (studentPercentage() >= 80) {
 }
 result.appendChild(grade);
 
-var overview = document.createElement("h2");
+var overview = document.createElement("p");
 if (studentPercentage() >= 75) {
   overview.innerText = "Scholarship Status : 25% Discount";
 } else {
@@ -68,6 +69,8 @@ var tableElement = document.createElement("table");
 tableElement.setAttribute("border", "1");
 mainDiv.appendChild(tableElement);
 
+// First row of table starts from here
+// All heading section starts
 var tableRow1 = document.createElement("tr");
 tableElement.appendChild(tableRow1);
 
@@ -88,6 +91,7 @@ tableRow1.appendChild(tableHeading2);
 tableRow1.appendChild(tableHeading3);
 tableRow1.appendChild(tableHeading4);
 
+// Second row of table starts from here
 var tableRow2 = document.createElement("tr");
 tableElement.appendChild(tableRow2);
 
@@ -112,6 +116,7 @@ tableRow2.appendChild(tableHeadingR2_2);
 tableRow2.appendChild(tableHeadingR2_3);
 tableRow2.appendChild(tableHeadingR2_4);
 
+// Thirds row of table starts from here
 var tableRow3 = document.createElement("tr");
 tableElement.appendChild(tableRow3);
 
@@ -136,6 +141,7 @@ tableRow3.appendChild(tableHeadingR3_2);
 tableRow3.appendChild(tableHeadingR3_3);
 tableRow3.appendChild(tableHeadingR3_4);
 
+// Fourth row of table starts from here
 var tableRow4 = document.createElement("tr");
 tableElement.appendChild(tableRow4);
 
@@ -160,6 +166,7 @@ tableRow4.appendChild(tableHeadingR4_2);
 tableRow4.appendChild(tableHeadingR4_3);
 tableRow4.appendChild(tableHeadingR4_4);
 
+// Fifth row table starts from here
 var tableRow5 = document.createElement("tr");
 tableElement.appendChild(tableRow5);
 
@@ -184,6 +191,7 @@ tableRow5.appendChild(tableHeadingR5_2);
 tableRow5.appendChild(tableHeadingR5_3);
 tableRow5.appendChild(tableHeadingR5_4);
 
+// Sixth and last row of table starts from here
 var tableRow6 = document.createElement("tr");
 tableElement.appendChild(tableRow6);
 
